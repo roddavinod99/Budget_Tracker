@@ -1,0 +1,11 @@
+/* Custom Styles */
+.page-link {
+  cursor: pointer;
+}
+
+/* Ensure charts are responsive */
+.chart-container {
+  position: relative;
+  height: 250px;
+  width: 100%;
+}

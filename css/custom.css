@@ -9,3 +9,9 @@
   height: 250px;
   width: 100%;
 }
+
+/* Date Picker Input Style */
+#date-range-picker {
+    cursor: pointer;
+    background-color: var(--fds-card-bg);
+}

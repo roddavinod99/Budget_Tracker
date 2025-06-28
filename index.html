@@ -4,34 +4,25 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>My Personal Finance Tracker</title>
+    <title>Finance Tracker</title>
     <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler-flags.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler-payments.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
     <link href="css/custom.css" rel="stylesheet"/>
-    <style>
-      /* Custom Styles */
-      .page-link {
-        cursor: pointer;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="page">
-      <aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
+      <aside class="navbar navbar-vertical navbar-expand-lg">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <h1 class="navbar-brand navbar-brand-autodark">
-            <a href=".">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
-                <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
-              </svg>
-              Finance Tracker
+          <h1 class="navbar-brand">
+            <a href="." class="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-finserv" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 4l-6 6l-3 -3l-6 6l3 3l6 -6l3 3l6 -6l-3 -3" /><path d="M21 15l-3 3l-6 -6l3 -3l6 6" /></svg>
+                FinSet
             </a>
           </h1>
           <div class="collapse navbar-collapse" id="sidebar-menu">
@@ -39,31 +30,33 @@
               <li class="nav-item">
                 <a class="nav-link" href="#" id="nav-dashboard">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-dashboard"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11.667 19.462c.174 .283 .465 .462 .79 .462h.029c.325 0 .616 -.179 .79 -.462c3.048 -4.958 5.734 -9.314 5.734 -12.462a8 8 0 1 0 -16 0c0 3.148 2.686 7.504 5.734 12.462z" /><path d="M12 12a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /></svg>
                   </span>
-                  <span class="nav-link-title">
-                    Dashboard
+                  <span class="nav-link-title">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="nav-reports">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-analytics" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 17l0 -5" /><path d="M12 17l0 -1" /><path d="M15 17l0 -3" /></svg>
                   </span>
+                  <span class="nav-link-title">Reports</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="nav-transactions">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-details" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 5h8" /><path d="M13 9h5" /><path d="M13 15h8" /><path d="M13 19h5" /><rect x="3" y="4" width="6" height="6" rx="1" /><rect x="3" y="14" width="6" height="6" rx="1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-arrows-transfer-down"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 3a1 1 0 0 1 1 1v11.586l2.293 -2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1 -1.414 0l-4 -4a1 1 0 0 1 1.414 -1.414l2.293 2.293v-11.586a1 1 0 0 1 1 -1z" /><path d="M7 21a1 1 0 0 1 -1 -1v-11.586l-2.293 2.293a1 1 0 0 1 -1.414 -1.414l4 -4a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 -1.414 1.414l-2.293 -2.293v11.586a1 1 0 0 1 -1 1z" /></svg>
                   </span>
-                  <span class="nav-link-title">
-                    Transactions
-                  </span>
+                  <span class="nav-link-title">Transactions</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="nav-settings">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1.002 .613 2.103 .613 3.105 0z" /><circle cx="12" cy="12" r="3" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-settings"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.647 4.01l.104 -.01a4.503 4.503 0 0 1 4.237 5.57l.01 .104a4.5 4.5 0 0 1 -5.57 4.237l-.104 .01a4.503 4.503 0 0 1 -4.237 -5.57l-.01 -.104a4.5 4.5 0 0 1 5.57 -4.237zm-2.647 4.99a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" /><path d="M6.159 7.692a4.5 4.5 0 0 1 5.823 -5.823l.233 .082a4.5 4.5 0 0 1 5.823 5.823l-.082 .233a4.5 4.5 0 0 1 -5.823 5.823l-.233 -.082a4.5 4.5 0 0 1 -5.823 -5.823l.082 -.233z" /></svg>
                   </span>
-                  <span class="nav-link-title">
-                    Settings
-                  </span>
+                  <span class="nav-link-title">Settings</span>
                 </a>
               </li>
             </ul>
@@ -71,95 +64,22 @@
         </div>
       </aside>
       <div class="page-wrapper">
-        <div class="page-header d-print-none">
-          <div class="container-xl">
-            <div class="row g-2 align-items-center">
-              <div class="col">
-                <h2 class="page-title" id="page-title">
-                  </h2>
-              </div>
-              <div class="col-auto ms-auto d-print-none">
-                <div class="btn-list">
-                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-transaction">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
-                    Add Transaction
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="page-body">
-          <div class="container-xl">
-            <div id="password-prompt" class="card">
-              <div class="card-body">
-                <h3 class="card-title">Enter Password</h3>
-                <p class="text-muted" id="password-message">To access your data, please enter your password. If this is your first time, the password you enter will be used to encrypt your data.</p>
-                <div class="mb-3">
-                  <label class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password-input">
-                </div>
-                <div class="form-footer">
-                  <button type="button" class="btn btn-primary w-100" id="password-submit-btn">Unlock</button>
-                </div>
-                <div class="alert alert-danger mt-3" role="alert">
-                  <strong>Important:</strong> This password cannot be recovered. If you forget it, you will lose access to all your data. Please store it in a safe place.
-                </div>
-              </div>
+          <div class="container-xl" id="main-container">
             </div>
-
-            <div id="main-content" class="d-none">
-              </div>
-          </div>
         </div>
       </div>
     </div>
 
     <div class="modal modal-blur fade" id="modal-add-transaction" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">New Transaction</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="add-transaction-form">
-              <div class="mb-3">
-                <label class="form-label">Type</label>
-                <select class="form-select" id="transaction-type">
-                  <option value="expense">Expense</option>
-                  <option value="income">Income</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Amount</label>
-                <input type="number" class="form-control" id="transaction-amount" placeholder="Enter amount" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Category</label>
-                <input type="text" class="form-control" id="transaction-category" placeholder="e.g., Groceries, Salary" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Date</label>
-                <input type="date" class="form-control" id="transaction-date" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Description</label>
-                <textarea class="form-control" id="transaction-description" rows="3"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="save-transaction-btn">Save transaction</button>
-          </div>
-        </div>
       </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
     <script src="js/security.js"></script>
     <script src="js/db.js"></script>
